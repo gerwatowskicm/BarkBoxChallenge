@@ -1,6 +1,6 @@
-<a href="<%= url_for(dog) %>">
-  <article>
+<a href="<%= url_for(dog) %>" class="thumbnail-item">
+  <article class="p-3 text-center m-auto d-flex flex-column">
     <h2 class="dog-name"><%= dog.name %></h2>
-    <%= image_tag url_for(dog.images.first), class: "dog-photo", alt: "Photo of #{dog.name}" %>
+    <%= image_tag url_for(dog.images.first), class: "dog-photo img-fluid d-block h-100", alt: "Photo of #{dog.name}" %>
   </article>
 </a>

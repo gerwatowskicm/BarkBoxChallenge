@@ -13,9 +13,36 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
 
 header {
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.thumbnail-item {
+  align-items: center;
+  flex: 0 0 32%;
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+@media screen and (max-width:801px)  { 
+  .thumbnail-item {
+    flex: 0 0 50%;
+  }
+ }
+
+ @media screen and (max-width:600px)  {
+  .thumbnail-item {
+    align-items: center;
+    flex: 0 0 100%;
+  }
 }

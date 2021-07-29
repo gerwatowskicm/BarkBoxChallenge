@@ -4,7 +4,7 @@
   <%= f.input :image, as: :file %>
 
   <% if @dog.images.any? %>
-    <%= image_tag @dog.images.first %>
+    <%= image_tag @dog.images.first, class:"img-fluid my-2" %>
   <% end %>
 
   <%= f.button :submit %>

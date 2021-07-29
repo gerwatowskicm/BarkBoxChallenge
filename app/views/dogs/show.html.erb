@@ -4,7 +4,7 @@
     <div class="carousel-inner d-flex m-auto">
       <% @dog.images.each_with_index do |image,i|%>
       <div class="carousel-item <%= "active " if i==0 %>">
-          <%= image_tag url_for(image), class:"d-flex m-auto", alt: "Photo of #{@dog.name}"%>
+          <%= image_tag url_for(image), class:"d-flex m-auto img-fluid", alt: "Photo of #{@dog.name}"%>
       </div>
       <%end%>
     </div>
@@ -16,7 +16,7 @@
     </a>
   </div>
 
-  <p><%= @dog.description %></p>
+  <p class="my-3"><%= @dog.description %></p>
 
   <%= link_to "Edit #{@dog.name}'s Profile", edit_dog_path %>
   <br>
